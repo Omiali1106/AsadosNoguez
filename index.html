@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Asados Noguez | Auténtico Sabor a la Parrilla</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="custom-cursor"></div>
+    <header class="navbar">
+        <div class="container nav-content">
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <div class="logo">🔥 Asados Noguez</div>
+            
+            <nav class="nav-links" id="nav-links">
+                <a href="#hero" class="nav-link">Inicio</a>
+                <a href="#about" class="nav-link">Por qué elegirnos</a>
+                <a href="#menu" class="nav-link">Menú</a>
+                <a href="#map-checkout" class="nav-link">Ubicación y Pedido</a>
+            </nav>
+            
+            <a href="#map-checkout" class="btn btn-primary glow-effect desktop-cart">Tu Pedido 🛒</a>
+            <a href="#map-checkout" class="mobile-cart">🛒</a>
+        </div>
+    </header>
+
+    <section id="hero" class="hero container">
+        <div class="hero-text">
+            <h1>Asado a la Perfección.<br>Sabor de Familia.</h1>
+            <p>El mejor pollo asado y costillas en Progreso Industrial. Piel crujiente, carne jugosa y nuestras guarniciones tradicionales. Pide en línea y recíbelo en la puerta de tu casa.</p>
+            <a href="#menu" class="btn btn-outline gold-border">Ver Menú de la Casa</a>
+        </div>
+        <div class="hero-image">
+            <div class="image-placeholder main-img" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDqnWqEk_rSZV9deYFdIDWFR3WyZwfsQ4Vrw&s') center/cover;">
+                <div class="review-floating">
+                    <span class="stars">★★★★★ 4.8 en Google</span>
+                    <p>"Rico todo en verdad muy rico. Muy buen ambiente familiar."</p>
+                    <small>- Opinión de Cliente</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="features container">
+        <div class="feature-card">
+            <div class="icon-box glow-red">🍗</div>
+            <h3>Receta Original</h3>
+            <p>Asado lentamente al carbón con el inigualable sazón de la casa.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon-box glow-red">🥗</div>
+            <h3>Paquetes Familiares</h3>
+            <p>Acompañados de salsa, arroz, frijoles, tortillas, nopales y cebollitas.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon-box glow-red">🛵</div>
+            <h3>Entrega a Domicilio</h3>
+            <p>Llegamos a Progreso Industrial. ¡Tu comida caliente y lista!</p>
+        </div>
+    </section>
+
+    <section id="menu" class="full-menu-section">
+        <div class="container">
+            <h2 class="section-title text-center">Nuestro Menú Completo</h2>
+            <p class="swipe-hint">👉 Desliza para ver más opciones</p>
+            
+            <div class="menu-category">
+                <h3 class="category-title">1. Pollo al Carbón</h3>
+                <div class="horizontal-scroll">
+                    <div class="product-card min-w-card">
+                        <div class="product-img" style="background: url('https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                        <div class="product-info">
+                            <h4>Pollo Paquete Sencillo</h4>
+                            <p class="desc">Incluye nopales, cebollitas y chiles.</p>
+                            <span class="price">$210.00 MXN</span>
+                            <button class="btn btn-small btn-primary">Agregar 🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card min-w-card">
+                        <div class="product-img" style="background: url('https://images.unsplash.com/photo-1598514982205-f36b96d1e8dd?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                        <div class="product-info">
+                            <h4>Pollo Paquete Familiar</h4>
+                            <p class="desc">Incluye salsa, arroz, frijoles, tortillas, nopales y cebollas.</p>
+                            <span class="price">$280.00 MXN</span>
+                            <button class="btn btn-small btn-primary">Agregar 🛒</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3 class="category-title">2. Costillas</h3>
+                <div class="horizontal-scroll">
+                    <div class="product-card min-w-card">
+                        <div class="product-img" style="background: url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                        <div class="product-info">
+                            <h4>1/2 Costilla Paq. Sencillo</h4>
+                            <p class="desc">1/2 kg. Incluye nopales y cebollitas.</p>
+                            <span class="price">$220.00 MXN</span>
+                            <button class="btn btn-small btn-primary">Agregar 🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card min-w-card">
+                        <div class="product-img" style="background: url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                        <div class="product-info">
+                            <h4>1/2 Costilla Paq. Familiar</h4>
+                            <p class="desc">1/2 kg. Incluye guarniciones completas.</p>
+                            <span class="price">$300.00 MXN</span>
+                            <button class="btn btn-small btn-primary">Agregar 🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card min-w-card">
+                        <div class="product-img" style="background: url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                        <div class="product-info">
+                            <h4>Costilla 1 KG Paq. Sencillo</h4>
+                            <p class="desc">1 kg. Incluye nopales y cebollitas.</p>
+                            <span class="price">$360.00 MXN</span>
+                            <button class="btn btn-small btn-primary">Agregar 🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card min-w-card">
+                        <div class="product-img" style="background: url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                        <div class="product-info">
+                            <h4>Costilla 1 KG Paq. Familiar</h4>
+                            <p class="desc">1 kg. Incluye guarniciones completas.</p>
+                            <span class="price">$430.00 MXN</span>
+                            <button class="btn btn-small btn-primary">Agregar 🛒</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3 class="category-title">3. Asado de Barriga</h3>
+                <div class="horizontal-scroll">
+                    <div class="product-card min-w-card">
+                        <div class="product-img" style="background: url('https://images.unsplash.com/photo-1606342241062-c9df259fa744?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                        <div class="product-info">
+                            <h4>Barriga Sencillo (1/2 kg)</h4>
+                            <p class="desc">Incluye nopales, cebollas y chiles.</p>
+                            <span class="price">$240.00 MXN</span>
+                            <button class="btn btn-small btn-primary">Agregar 🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card min-w-card">
+                        <div class="product-img" style="background: url('https://images.unsplash.com/photo-1606342241062-c9df259fa744?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                        <div class="product-info">
+                            <h4>Barriga Familiar (1/2 kg)</h4>
+                            <p class="desc">Con salsa, arroz, frijoles y tortillas.</p>
+                            <span class="price">$310.00 MXN</span>
+                            <button class="btn btn-small btn-primary">Agregar 🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card min-w-card">
+                        <div class="product-img" style="background: url('https://images.unsplash.com/photo-1606342241062-c9df259fa744?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                        <div class="product-info">
+                            <h4>Barriga Sencillo (1 kg)</h4>
+                            <p class="desc">Cebollitas, nopales y chiles.</p>
+                            <span class="price">$450.00 MXN</span>
+                            <button class="btn btn-small btn-primary">Agregar 🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card min-w-card">
+                        <div class="product-img" style="background: url('https://images.unsplash.com/photo-1606342241062-c9df259fa744?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                        <div class="product-info">
+                            <h4>Barriga Familiar (1 kg)</h4>
+                            <p class="desc">Incluye guarniciones completas.</p>
+                            <span class="price">$530.00 MXN</span>
+                            <button class="btn btn-small btn-primary">Agregar 🛒</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3 class="category-title">4. Arrachera</h3>
+                <div class="horizontal-scroll">
+                    <div class="product-card min-w-card">
+                        <div class="product-img" style="background: url('https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                        <div class="product-info">
+                            <h4>Arrachera Sencilla (1/2 kg)</h4>
+                            <p class="desc">Incluye nopales, cebollitas y chiles.</p>
+                            <span class="price">$250.00 MXN</span>
+                            <button class="btn btn-small btn-primary">Agregar 🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card min-w-card">
+                        <div class="product-img" style="background: url('https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                        <div class="product-info">
+                            <h4>Arrachera Familiar (1/2 kg)</h4>
+                            <p class="desc">Incluye guarniciones completas.</p>
+                            <span class="price">$330.00 MXN</span>
+                            <button class="btn btn-small btn-primary">Agregar 🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card min-w-card">
+                        <div class="product-img" style="background: url('https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                        <div class="product-info">
+                            <h4>Arrachera Sencilla (1 kg)</h4>
+                            <p class="desc">Con nopales, cebollitas y chiles.</p>
+                            <span class="price">$450.00 MXN</span>
+                            <button class="btn btn-small btn-primary">Agregar 🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card min-w-card">
+                        <div class="product-img" style="background: url('https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                        <div class="product-info">
+                            <h4>Arrachera Familiar (1 kg)</h4>
+                            <p class="desc">Incluye guarniciones completas.</p>
+                            <span class="price">$530.00 MXN</span>
+                            <button class="btn btn-small btn-primary">Agregar 🛒</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3 class="category-title">5. Chistorra y Chorizo</h3>
+                <div class="horizontal-scroll">
+                    <div class="product-card min-w-card">
+                        <div class="product-img" style="background: url('https://images.unsplash.com/photo-1595054224538-4fb6552a9f4a?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                        <div class="product-info">
+                            <h4>Chistorra (250 gr)</h4>
+                            <p class="desc">Orden con nopales, cebollas y chiles.</p>
+                            <span class="price">$100.00 MXN</span>
+                            <button class="btn btn-small btn-primary">Agregar 🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card min-w-card">
+                        <div class="product-img" style="background: url('https://images.unsplash.com/photo-1595054224538-4fb6552a9f4a?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                        <div class="product-info">
+                            <h4>Chorizo Argentino (250 gr)</h4>
+                            <p class="desc">Orden con nopales, cebollitas y chiles.</p>
+                            <span class="price">$100.00 MXN</span>
+                            <button class="btn btn-small btn-primary">Agregar 🛒</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3 class="category-title">6. Parrillada Argentina</h3>
+                <div class="horizontal-scroll">
+                    <div class="product-card min-w-card">
+                        <div class="product-img" style="background: url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                        <div class="product-info">
+                            <h4>Parrilla Sencilla 1/2 KG</h4>
+                            <p class="desc">350g arrachera, 300g chorizo, 300g chistorra. Nopales y cebollitas.</p>
+                            <span class="price">$300.00 MXN</span>
+                            <button class="btn btn-small btn-primary">Agregar 🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card min-w-card">
+                        <div class="product-img" style="background: url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                        <div class="product-info">
+                            <h4>Parrilla Familiar 1/2 KG</h4>
+                            <p class="desc">Mismas carnes que la sencilla, más guarniciones completas.</p>
+                            <span class="price">$370.00 MXN</span>
+                            <button class="btn btn-small btn-primary">Agregar 🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card min-w-card">
+                        <div class="product-img" style="background: url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                        <div class="product-info">
+                            <h4>Parrilla Sencilla 1 KG</h4>
+                            <p class="desc">750g arrachera, 300g chorizo, 300g chistorra. Nopales y cebollitas.</p>
+                            <span class="price">$500.00 MXN</span>
+                            <button class="btn btn-small btn-primary">Agregar 🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card min-w-card">
+                        <div class="product-img" style="background: url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                        <div class="product-info">
+                            <h4>Parrilla Familiar 1 KG</h4>
+                            <p class="desc">Mismas carnes que la de 1KG, más guarniciones completas.</p>
+                            <span class="price">$580.00 MXN</span>
+                            <button class="btn btn-small btn-primary">Agregar 🛒</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3 class="category-title">7. Parrillada Mixta</h3>
+                <div class="horizontal-scroll">
+                    <div class="product-card min-w-card">
+                        <div class="product-img" style="background: url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                        <div class="product-info">
+                            <h4>Paquete para 5 Personas</h4>
+                            <p class="desc">Arrachera, chistorra, chorizo, barriga, pollo y costilla. Guarniciones completas.</p>
+                            <span class="price">$550.00 MXN</span>
+                            <button class="btn btn-small btn-primary">Agregar 🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card min-w-card">
+                        <div class="product-img" style="background: url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                        <div class="product-info">
+                            <h4>Paquete para 3 Personas</h4>
+                            <p class="desc">Arrachera, pollo, chorizo, chistorra, barriga, costilla. Guarniciones completas.</p>
+                            <span class="price">$400.00 MXN</span>
+                            <button class="btn btn-small btn-primary">Agregar 🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card min-w-card">
+                        <div class="product-img" style="background: url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                        <div class="product-info">
+                            <h4>Mixta para 2 a 3 Personas</h4>
+                            <p class="desc">Arrachera, chistorra, chorizo, pollo, costilla, barriga. Nopales, cebollitas.</p>
+                            <span class="price">$300.00 MXN</span>
+                            <button class="btn btn-small btn-primary">Agregar 🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card min-w-card">
+                        <div class="product-img" style="background: url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                        <div class="product-info">
+                            <h4>Paquete Mixto (Por Persona)</h4>
+                            <p class="desc">Come de todo: pollo, arrachera, chistorra, chorizo, barriga, costilla, nopales y cebollas.</p>
+                            <span class="price">$150.00 MXN</span>
+                            <button class="btn btn-small btn-primary">Agregar 🛒</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3 class="category-title">8. Órdenes Separadas</h3>
+                <div class="horizontal-scroll">
+                    <div class="product-card min-w-card">
+                        <div class="product-img" style="background: url('https://images.unsplash.com/photo-1534080564583-6be75777b70a?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                        <div class="product-info">
+                            <h4>Salsa Casera</h4>
+                            <p class="desc">Totalmente casera y sin conservadores.</p>
+                            <span class="price">$25.00 MXN</span>
+                            <button class="btn btn-small btn-primary">Agregar 🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card min-w-card">
+                        <div class="product-img" style="background: url('https://images.unsplash.com/photo-1534080564583-6be75777b70a?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                        <div class="product-info">
+                            <h4>Arroz (Vaso de 1/2)</h4>
+                            <p class="desc">Producto casero sin conservadores.</p>
+                            <span class="price">$25.00 MXN</span>
+                            <button class="btn btn-small btn-primary">Agregar 🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card min-w-card">
+                        <div class="product-img" style="background: url('https://images.unsplash.com/photo-1534080564583-6be75777b70a?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                        <div class="product-info">
+                            <h4>Frijoles (Vaso de 1/2)</h4>
+                            <p class="desc">Producto casero sin conservadores.</p>
+                            <span class="price">$25.00 MXN</span>
+                            <button class="btn btn-small btn-primary">Agregar 🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card min-w-card">
+                        <div class="product-img" style="background: url('https://images.unsplash.com/photo-1534080564583-6be75777b70a?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                        <div class="product-info">
+                            <h4>Tortillas por Kilo</h4>
+                            <p class="desc">Tortillas de tortillería amarillas.</p>
+                            <span class="price">$25.00 MXN</span>
+                            <button class="btn btn-small btn-primary">Agregar 🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card min-w-card">
+                        <div class="product-img" style="background: url('https://images.unsplash.com/photo-1534080564583-6be75777b70a?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                        <div class="product-info">
+                            <h4>Orden de Nopales</h4>
+                            <p class="desc">5 nopales con sazón de Asados Noguez.</p>
+                            <span class="price">$25.00 MXN</span>
+                            <button class="btn btn-small btn-primary">Agregar 🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card min-w-card">
+                        <div class="product-img" style="background: url('https://images.unsplash.com/photo-1534080564583-6be75777b70a?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                        <div class="product-info">
+                            <h4>Orden de Cebollitas</h4>
+                            <p class="desc">8 cebollas con el sazón de Asados Noguez.</p>
+                            <span class="price">$25.00 MXN</span>
+                            <button class="btn btn-small btn-primary">Agregar 🛒</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="map-checkout" class="container checkout-map-section">
+        
+        <div class="map-container">
+            <h3>Nuestra Ubicación</h3>
+            <p class="map-desc">A 200m de la Clínica del Ángel (Parada del Árbol), Progreso Industrial.</p>
+            <iframe 
+                src="https://maps.google.com/maps?q=Asados%20Noguez%20Progreso%20Industrial&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+
+        <div class="checkout-panel">
+            <h3>Tu Pedido en Línea</h3>
+            
+            <div class="cart-items" id="lista-productos"></div>
+            
+            <div id="contenedor-total"></div>
+
+            <form class="checkout-form" id="pedido-form">
+                
+                <div class="form-group">
+                    <label>Tipo de Entrega *</label>
+                    <div class="custom-select-wrapper">
+                        <div class="custom-select" id="select-entrega">
+                            <span class="selected-value">🛵 Entrega a Domicilio</span>
+                            <span class="arrow">▼</span>
+                        </div>
+                        <ul class="custom-options" id="options-entrega">
+                            <li data-value="Entrega a Domicilio">🛵 Entrega a Domicilio</li>
+                            <li data-value="Recoger en Sucursal">🏪 Recoger en Sucursal</li>
+                        </ul>
+                    </div>
+                    <input type="hidden" id="tipo-entrega" value="Entrega a Domicilio">
+                </div>
+
+                <div class="form-group">
+                    <label>Método de Pago *</label>
+                    <div class="custom-select-wrapper">
+                        <div class="custom-select" id="select-pago">
+                            <span class="selected-value">💵 Efectivo al recibir</span>
+                            <span class="arrow">▼</span>
+                        </div>
+                        <ul class="custom-options" id="options-pago">
+                            <li data-value="Efectivo">💵 Efectivo al recibir</li>
+                            <li data-value="Transferencia">📱 Transferencia (Te pasamos los datos)</li>
+                        </ul>
+                    </div>
+                    <input type="hidden" id="metodo-pago" value="Efectivo">
+                </div>
+
+                <div class="form-group">
+                    <label>Tu Nombre Completo *</label>
+                    <input type="text" id="cliente-nombre" placeholder="Ej. Juan Pérez" required>
+                </div>
+                <div class="form-group">
+                    <label>Tu Teléfono *</label>
+                    <input type="tel" id="cliente-tel" placeholder="Ej. 55 1234 5678" required>
+                </div>
+                <div class="form-group">
+                    <label>Dirección (Si es a domicilio)</label>
+                    <input type="text" id="cliente-dir" placeholder="Calle, Colonia, Referencias">
+                </div>
+                
+                <button type="submit" class="btn btn-whatsapp glow-effect">
+                    Pedir por WhatsApp 🟢
+                </button>
+            </form>
+        </div>
+        
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div>
+                <h4>Ubicación</h4>
+                <p>Manzana 003, 54460 Progreso Industrial, Méx.</p>
+            </div>
+            <div>
+                <h4>Contacto</h4>
+                <p>Tel: 55 4726 6259</p>
+            </div>
+            <div>
+                <h4>Horarios</h4>
+                <p>Jueves a Domingo: 10:00 a.m. - 7:00 p.m.</p>
+            </div>
+        </div>
+        <p>© 2026 Asados Noguez. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

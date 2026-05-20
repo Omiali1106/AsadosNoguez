@@ -1,0 +1,778 @@
+/* ========================================================
+   VARIABLES PREMIUM (Dark Mode)
+======================================================== */
+:root {
+    --bg-main: #121212; 
+    --bg-card: #1e1e1e; 
+    --bg-panel: #262626; 
+    
+    --primary-red: #e63946; 
+    --primary-hover: #d62828;
+    --whatsapp-green: #25d366;
+    
+    --text-light: #fdfbf7; 
+    --text-muted: #a8a8a8;
+    --gold: #d4af37; 
+    
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+    
+    --radius: 12px;
+    --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ========================================================
+   SCROLLBAR PRINCIPAL PREMIUM
+======================================================== */
+html::-webkit-scrollbar {
+    width: 10px;
+}
+html::-webkit-scrollbar-track {
+    background: var(--bg-main);
+}
+html::-webkit-scrollbar-thumb {
+    background-color: var(--primary-red);
+    border-radius: 10px;
+    border: 2px solid var(--bg-main); /* Efecto de borde elegante */
+}
+html::-webkit-scrollbar-thumb:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Agrega esto casi al principio de tu styles.css */
+html {
+    scroll-behavior: smooth; /* Hace que el salto de los enlaces sea un viaje fluido */
+    scroll-padding-top: 100px; /* Evita que el menú fijo tape los títulos al llegar */
+}
+
+/* Y para el cursor, vamos a ocultar el cursor nativo de Windows/Mac solo en escritorio */
+@media (min-width: 901px) {
+    body, a, button, input, select {
+        cursor: none !important; 
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-light);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+/* ========================================================
+   HEADER DINÁMICO (Transparente al inicio)
+======================================================== */
+.navbar {
+    padding: 25px 0;
+    background: transparent; /* Totalmente invisible al inicio */
+    position: fixed; /* Flota sobre el Hero */
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid transparent;
+    transition: all 0.4s ease; /* Transición súper suave */
+}
+
+/* Esta clase se la agregaremos con JavaScript al hacer scroll */
+.navbar.scrolled {
+    padding: 15px 0;
+    background: rgba(18, 18, 18, 0.9);
+    backdrop-filter: blur(12px); 
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-light);
+    letter-spacing: 1px;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin: 0 15px;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+/* ========================================================
+   BOTONES Y EFECTOS
+======================================================== */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+}
+
+.btn-primary {
+    background: var(--primary-red);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.btn-small {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    border-radius: 8px;
+}
+
+.btn-outline.gold-border {
+    background: transparent;
+    border: 2px solid var(--gold);
+    color: var(--gold);
+}
+
+.btn-outline.gold-border:hover {
+    background: var(--gold);
+    color: var(--bg-main);
+}
+
+.btn-whatsapp {
+    background: var(--whatsapp-green);
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    border-radius: 8px;
+    border: none;
+}
+
+.glow-effect {
+    box-shadow: 0 0 15px rgba(230, 57, 70, 0.4);
+}
+.glow-effect:hover {
+    box-shadow: 0 0 25px rgba(230, 57, 70, 0.7);
+}
+
+/* ========================================================
+   HERO SECTION
+======================================================== */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 20px;
+    gap: 50px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: var(--text-light);
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    max-width: 90%;
+}
+
+.hero-image {
+    flex: 1;
+    position: relative;
+}
+
+.image-placeholder {
+    background: linear-gradient(45deg, #2a2a2a, #1a1a1a);
+    height: 400px;
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--text-muted);
+}
+
+.review-floating {
+    position: absolute;
+    bottom: -20px;
+    left: -30px;
+    background: rgba(30, 30, 30, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.05);
+    max-width: 280px;
+}
+
+.stars { color: var(--gold); margin-bottom: 5px; display: block; }
+.review-floating p { font-size: 0.9rem; margin-bottom: 10px; font-style: italic; }
+
+/* ========================================================
+   FEATURES
+======================================================== */
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 60px 20px;
+}
+
+.feature-card {
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: var(--radius);
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.02);
+    transition: var(--transition);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(230, 57, 70, 0.3);
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background: rgba(230, 57, 70, 0.1);
+    color: var(--primary-red);
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    margin: 0 auto 20px;
+    box-shadow: 0 0 20px rgba(230, 57, 70, 0.2);
+}
+
+/* ========================================================
+   MENÚ Y CHECKOUT PANEL
+======================================================== */
+.full-menu-section {
+    padding: 60px 0;
+    background: var(--bg-main);
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.text-center { text-align: center; }
+
+.swipe-hint {
+    text-align: center;
+    color: var(--gold);
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+.menu-category { margin-bottom: 50px; }
+
+.category-title {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--text-light);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.horizontal-scroll {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 20px; 
+    scroll-snap-type: x mandatory; 
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-red) var(--bg-card);
+}
+
+.horizontal-scroll::-webkit-scrollbar { height: 8px; }
+.horizontal-scroll::-webkit-scrollbar-track { background: var(--bg-card); border-radius: 10px; }
+.horizontal-scroll::-webkit-scrollbar-thumb { background-color: var(--primary-red); border-radius: 10px; }
+
+.min-w-card {
+    flex: 0 0 280px; 
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.min-w-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.product-img { height: 180px; }
+
+.product-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-info h4 { margin-bottom: 10px; font-size: 1.1rem; }
+.desc { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px; flex-grow: 1; }
+.price { color: var(--gold); font-weight: bold; display: block; margin-bottom: 15px; }
+
+/* ========================================================
+   SECCIÓN: TU PEDIDO Y MAPA 
+======================================================== */
+.checkout-map-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 40px;
+    padding: 80px 20px;
+    align-items: start; /* Mantiene el mapa sin estirarse a la fuerza */
+}
+
+.checkout-panel, .map-container {
+    background: var(--bg-panel);
+    padding: 30px;
+    border-radius: var(--radius);
+    border: 1px solid rgba(255,255,255,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout-panel h3, .map-container h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 10px;
+}
+
+.map-desc {
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.map-container iframe {
+    flex-grow: 1;
+    width: 100%;
+    min-height: 400px;
+    border: 0;
+    border-radius: 8px;
+}
+
+/* ========================================================
+   CONTROLES DEL CARRITO Y SCROLL INTERNO
+======================================================== */
+.cart-items {
+    max-height: 320px; /* Límite de altura antes de scroll */
+    overflow-y: auto;
+    padding-right: 10px;
+    margin-bottom: 15px;
+}
+
+.cart-items::-webkit-scrollbar { width: 6px; }
+.cart-items::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.05); border-radius: 10px; }
+.cart-items::-webkit-scrollbar-thumb { background-color: var(--primary-red); border-radius: 10px; }
+.cart-items::-webkit-scrollbar-thumb:hover { background-color: var(--primary-hover); }
+
+.cart-item-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.cart-item-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    color: var(--text-light);
+}
+
+.qty-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.qty-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(0,0,0,0.3);
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.btn-qty {
+    background: transparent;
+    border: none;
+    color: var(--gold);
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: bold;
+    width: 20px;
+}
+.btn-qty:hover { color: var(--primary-red); }
+
+.btn-delete {
+    background: transparent;
+    border: none;
+    color: var(--primary-red);
+    cursor: pointer;
+    font-size: 0.85rem;
+    margin-left: auto;
+    text-decoration: underline;
+}
+
+/* Formulario Checkout */
+.checkout-form { margin-top: 15px; }
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; margin-bottom: 5px; font-size: 0.9rem; color: var(--text-muted); }
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 6px;
+    color: white;
+    font-family: var(--font-body);
+    font-size: 16px; /* Evita el zoom automático en iOS */
+    transition: border-color 0.3s;
+    cursor: text; 
+}
+.form-group input:focus {
+    outline: none;
+    border-color: var(--gold); /* Brillo dorado al escribir */
+}
+
+/* ========================================================
+   SELECTS PERSONALIZADOS (Adiós al cursor del sistema)
+======================================================== */
+.custom-select-wrapper {
+    position: relative;
+    user-select: none;
+    width: 100%;
+}
+
+.custom-select {
+    width: 100%;
+    padding: 12px;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition);
+    /* Forzamos a que use nuestro cursor custom en CSS */
+    cursor: none !important; 
+}
+
+.custom-select.open {
+    border-color: var(--gold);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.arrow { font-size: 0.8rem; transition: transform 0.3s; }
+.custom-select.open .arrow { transform: rotate(180deg); color: var(--gold); }
+
+.custom-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg-panel);
+    border: 1px solid var(--gold);
+    border-top: none;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 100;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.custom-options.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.custom-options li {
+    padding: 12px;
+    color: var(--text-light);
+    transition: background 0.2s;
+    /* Forzamos el cursor custom en la lista desplegable */
+    cursor: none !important; 
+}
+
+.custom-options li:hover {
+    background: rgba(212, 175, 55, 0.2); /* Fondo dorado transparente */
+    color: var(--gold);
+}
+
+.form-group input:focus, 
+.form-group select:focus {
+    outline: none;
+    border-color: var(--gold);
+}
+
+.form-group select option {
+    background: var(--bg-panel);
+    color: white;
+}
+
+/* ========================================================
+   FOOTER
+======================================================== */
+.footer {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    color: var(--text-muted);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.footer-content h4 { color: white; margin-bottom: 10px; }
+
+/* ========================================================
+   MENÚ HAMBURGUESA Y CARRITO MÓVIL (Bases)
+======================================================== */
+.menu-toggle {
+    display: none; /* Oculto en PC */
+    cursor: pointer;
+    flex-direction: column;
+    gap: 6px;
+    z-index: 1001; /* Siempre por encima del menú desplegable */
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 2px;
+    background-color: var(--text-light);
+    transition: all 0.3s ease;
+}
+
+.desktop-cart { display: inline-block; }
+.mobile-cart { 
+    display: none; 
+    font-size: 1.5rem; 
+    text-decoration: none; 
+    z-index: 1001;
+}
+
+/* ========================================================
+   RESPONSIVO (MÓVILES Y TABLETS) - ESTÉTICA MINIMALISTA
+======================================================== */
+@media (max-width: 900px) {
+    /* Header y Logo Centrado */
+    .nav-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .logo {
+        font-size: 1.3rem;
+        text-align: center;
+        flex-grow: 1; 
+    }
+    
+    .desktop-cart { display: none; }
+    .mobile-cart { display: block; }
+    .menu-toggle { display: flex; }
+
+    /* Menú Lateral (Estilo Drawer Premium) */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Inicia fuera de la pantalla por la derecha */
+        left: auto;
+        width: 70%; /* Abarca menos pantalla, se ve más fino */
+        max-width: 300px;
+        height: 100vh;
+        background-color: var(--bg-panel);
+        border-left: 1px solid rgba(255,255,255,0.02);
+        box-shadow: -15px 0 40px rgba(0,0,0,0.8); /* Sombra elegante sobre el fondo */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 40px;
+        transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        right: 0; 
+    }   
+
+    .nav-links a {
+        margin: 15px 0;
+        font-size: 1.2rem; 
+        letter-spacing: 0.5px;
+        color: var(--text-light);
+        border-bottom: 1px solid transparent;
+        transition: border-color 0.3s;
+    }
+
+    /* Animación de la Hamburguesa */
+    .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    /* Sección Hero - Sin encimarse */
+    .hero { 
+        flex-direction: column; 
+        text-align: center; 
+        padding-top: 110px; 
+        gap: 20px;
+    }
+    
+    .hero-text h1 { 
+        font-size: 2.6rem; 
+        margin-bottom: 15px;
+    }
+    
+    .hero-text p { 
+        margin: 0 auto 20px; 
+        font-size: 1rem;
+    }
+    
+    .hero-image {
+        width: 100%;
+        display: flex;
+        flex-direction: column; /* Estructura limpia para separar elementos */
+    }
+
+    .image-placeholder {
+        height: 250px; /* Formato apaisado para mejor visibilidad */
+        width: 100%;
+        border-radius: var(--radius);
+    }
+
+    /* Reseña Estilo Tarjeta Flotante (Pequeña e Inferior Izquierda) */
+    .review-floating {
+        position: absolute;
+        bottom: -60px; /* Flota sutilmente por debajo del borde de la imagen */
+        left: 10px;    /* Anclada a la izquierda */
+        right: auto;   /* Le quitamos la orden de estirarse hacia la derecha */
+        width: auto;   
+        max-width: 240px; /* La hacemos mucho más compacta */
+        margin: 0; 
+        
+        /* Diseño de cristal premium más pequeño */
+        padding: 12px 16px; 
+        background: rgba(30, 30, 30, 0.95);
+        backdrop-filter: blur(15px);
+        border-radius: 10px;
+        box-shadow: 5px 15px 25px rgba(0,0,0,0.6);
+        border: 1px solid rgba(255,255,255,0.08);
+        text-align: left;
+    }
+    
+    .review-floating p {
+        font-size: 0.85rem; /* Texto más chico y elegante */
+        line-height: 1.4;
+        margin-bottom: 4px;
+        color: var(--text-light);
+    }
+
+    /* Ajustes generales */
+    .features { grid-template-columns: 1fr; gap: 20px; padding-top: 20px; }
+    .checkout-map-section { grid-template-columns: 1fr; }
+    .min-w-card { flex: 0 0 85%; }
+    .map-container iframe { min-height: 300px; }
+}
+
+
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: var(--gold);
+    border-radius: 50%;
+    pointer-events: none; /* Evita que el punto bloquee los clics reales */
+    z-index: 9999;
+    transform: translate(-50%, -50%); /* Centra el punto exactamente en el mouse */
+    transition: width 0.3s, height 0.3s, background-color 0.3s;
+}
+
+/* Clase que le agregaremos con JS cuando pase por un botón o enlace */
+.custom-cursor.hover-effect {
+    width: 50px;
+    height: 50px;
+    background: rgba(212, 175, 55, 0.3); /* Dorado transparente */
+    backdrop-filter: blur(2px);
+    border: 1px solid var(--gold);
+}
+
+/* Ocultar el cursor falso en celulares y tablets (porque usan pantallas táctiles) */
+@media (max-width: 900px) {
+    .custom-cursor { display: none !important; }
+}
